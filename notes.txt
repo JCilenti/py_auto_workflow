@@ -1,0 +1,14 @@
+[ ] Navigate to projects directory 
+[ ] Create a folder for new project
+[ ] Change directory to folder
+[ ] touch README.md
+[ ] git init
+[ ] Go to GitHub.com
+[ ] Create new repo and name it dir name
+[ ] Click "Create repository"
+[ ] Copy "git remote" line
+[ ] Paste into dir folder in terminal
+[ ] git add .
+[ ] git commit -m "Initial commit"
+[ ] git push -u origin master
+[ ] code .
