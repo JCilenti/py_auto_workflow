@@ -1,9 +1,15 @@
-[ ] Navigate to projects directory 
-[ ] Create a folder for new project
-[ ] Change directory to folder
-[ ] touch README.md
-[ ] git init
-[ ] Go to GitHub.com
+
+##### Bash Based #####
+
+[x] Navigate to projects directory 
+[x] Create a folder for new project
+[x] Change directory to folder
+[x] touch README.md
+[x] git init
+
+##### Python Based #####
+
+[x] Go to GitHub.com
 [ ] Create new repo and name it dir name
 [ ] Click "Create repository"
 [ ] Copy "git remote" line
