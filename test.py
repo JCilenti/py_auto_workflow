@@ -1,6 +1,7 @@
 import sys
 import os
 import subprocess 
+import git
 
 # check for total # of arguments
 n = len(sys.argv)
@@ -32,5 +33,9 @@ print("Current working directory is:", cwd)
 print("Directory changed!")
 
 os.system('code .')
+
+new_repo = git.Repo(new_directory)
+
+
 
 file.close()
