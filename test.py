@@ -1,7 +1,11 @@
 import sys
 import os
 import subprocess 
-import git
+from github import Github
+from pprint import pprint
+import webbrowser
+from selenium import webdriver
+import time
 
 # check for total # of arguments
 n = len(sys.argv)
@@ -32,10 +36,21 @@ print("Current working directory is:", cwd)
 
 print("Directory changed!")
 
+# needs git init here somewhere
+
 os.system('code .')
 
-new_repo = git.Repo(new_directory)
+# using selenium
+driver = webdriver.Chrome(r"/home/atomas22/driver")
+driver.get("https://github.com/")
+
+# web browser
+#url = "https://github.com/"
+#webbrowser.open(url)
+
+# click on new repo
 
 
+#new_repo = github.Repository(new_directory)
 
 file.close()
