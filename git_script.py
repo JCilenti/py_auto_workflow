@@ -6,4 +6,4 @@ def create(dirname):
     for repo in g.get_user().get_repos():
         print(repo.name)
     u = g.get_user()
-    #repo = u.create_repo("dirname")
+    repo = u.create_repo("dirname")

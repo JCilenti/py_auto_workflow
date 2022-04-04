@@ -4,7 +4,6 @@ import subprocess
 from github import Github
 from pprint import pprint
 import webbrowser
-from selenium import webdriver
 import time
 
 # check for total # of arguments
@@ -23,11 +22,6 @@ path = os.path.join(parent_dir, new_directory)
 os.mkdir(path)
 os.chdir(path)
 
-# create a README file here
-file = open("README.md", "w")    
-
-print(path)
-
 print("Directory '% s' created" % new_directory)
 
 # change to the new directory
@@ -36,21 +30,18 @@ print("Current working directory is:", cwd)
 
 print("Directory changed!")
 
-# needs git init here somewhere
+g = Github("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")
+user = g.get_user()
+repo = user.create_repo(new_directory)
+print(repo)
 
+
+cwd = os.getcwd()
+print(cwd)
+os.chdir(cwd)
+os.system("git init")
+os.system("touch README.md")
+os.system("git add .")
+os.system("git commit -m 'Initial commit'")
+os.system("git push -u origin master")
 os.system('code .')
-
-# using selenium
-driver = webdriver.Chrome(r"/home/atomas22/driver")
-driver.get("https://github.com/")
-
-# web browser
-#url = "https://github.com/"
-#webbrowser.open(url)
-
-# click on new repo
-
-
-#new_repo = github.Repository(new_directory)
-
-file.close()
