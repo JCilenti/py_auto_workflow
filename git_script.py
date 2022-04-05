@@ -1,9 +1,8 @@
 from github import Github
 
 
-def create(dirname):
-    g = Github("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")
-    for repo in g.get_user().get_repos():
-        print(repo.name)
-    u = g.get_user()
-    repo = u.create_repo("dirname")
+g = Github("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")
+user = g.get_user()
+print(user)
+repo = user.create_repo("test_repo")
+print(repo)
