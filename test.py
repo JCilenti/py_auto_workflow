@@ -31,7 +31,7 @@ def create_dir():
 
 # authenticate with Github and create repo
 def create_git_instance():
-    g = Github("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")
+    g = Github("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")
     user = g.get_user()
     repo = user.create_repo(new_directory)
     print(repo)
