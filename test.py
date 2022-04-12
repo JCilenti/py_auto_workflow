@@ -4,6 +4,12 @@ import os
 from github import Github
 from pprint import pprint
 
+def get_key():
+    token_file = open("../token.txt", "r")
+    key = token_file.read(40)
+    token_file.close()
+    return key
+    #print(key)
 
 # check for total # of arguments
 def check_args():
@@ -30,8 +36,8 @@ def create_dir():
     return cwd
 
 # authenticate with Github and create repo
-def create_git_instance():
-    g = Github("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")
+def create_git_instance(my_github_key):
+    g = Github(my_github_key)
     user = g.get_user()
     repo = user.create_repo(new_directory)
     print(repo)
@@ -50,6 +56,6 @@ def finishing_up():
 if __name__ == '__main__':
     check_args()
     create_dir()
-    create_git_instance()
+    create_git_instance(get_key())
     finishing_up()
 
